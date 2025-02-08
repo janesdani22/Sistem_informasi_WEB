@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #fff;
+            animation: profilePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes profilePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateX(10px) scale(1.02);
+        }
+
+        .whatsapp {
+            background: linear-gradient(45deg, #25d366, #128C7E);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040);
+        }
+
+        .tiktok {
+            background: linear-gradient(45deg, #000000, #ff0050);
+        }
+
+        .email {
+            background: linear-gradient(45deg, #EA4335, #FBBC05);
+        }
+
+        .icon {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            margin-right: 15px;
+        }
+
+        .link-content {
+            flex: 1;
+        }
+
+        .link-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .link-content p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .ripple {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: ripple 1s linear infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+            }
+        }
+
+        /* Hover Effects */
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .social-link:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover .icon {
+            transform: rotate(360deg);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .social-link {
+                padding: 15px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="Hitam Merah Y2k Retro Lingkaran Logo Kelas Keren_20240917_195516_0000.png" alt="Profile Picture">
+            </div>
+            <h1>JANES PROFILE</h1>
+            <p>ABOUT FOR SIG</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://wa.me/qr/73YY7L34BCE3P1" class="social-link whatsapp">
+                <div class="icon">📱</div>
+                <div class="link-content">
+                    <h3>WhatsApp</h3>
+                    <p>+62 823-3794-3894</p>
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/zdhany_mnk?utm_source=qr&igsh=MTJvZWhjd2JkNGFyaQ==" class="social-link instagram">
+                <div class="icon">📸</div>
+                <div class="link-content">
+                    <h3>Instagram</h3>
+                    <p>@Zdhany_Mnk</p>
+                </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@silauraja76?_t=8rH5ce6vOKu&_r=1" class="social-link tiktok">
+                <div class="icon">🎵</div>
+                <div class="link-content">
+                    <h3>TikTok</h3>
+                    <p>@silauraja76</p>
+                </div>
+            </a>
+
+            <a href="#" class="social-link email">
+                <div class="icon">📧</div>
+                <div class="link-content">
+                    <h3>Email</h3>
+                    <p>20janesdaniputramanik@gmail.com</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.social-link').forEach(button => {
+            button.addEventListener('mouseover', function(e) {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

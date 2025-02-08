@@ -1,0 +1,15 @@
+.activity-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.activity-item a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #ff006c;
+    transform: translateX(10px);
+}

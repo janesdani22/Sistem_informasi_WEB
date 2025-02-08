@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        :root {
+            --neon-pink: #ff006c;
+            --neon-blue: #00f7ff;
+            --neon-purple: #bc13fe;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            background: var(--dark-bg);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 20px;
+            border-right: 2px solid rgba(255, 0, 108, 0.3);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 0 0 10px var(--neon-pink),
+                        0 0 20px var(--neon-blue);
+        }
+
+        .menu-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.4s;
+        }
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--neon-pink);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .header {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: rgba(42, 44, 46, 0.488);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 1.2em;
+            color: var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 1em;
+            color: white;
+        }
+
+        .activity-container {
+            background: rgba(10, 10, 10, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .activity-container h2 {
+            font-size: 1.5em;
+            color: var(--neon-blue);
+        }
+
+        .activity-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.4s;
+        }
+
+        .activity-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ff006c;
+            color: white;
+            position: relative;
+            margin-top: 30px;
+            animation: footerGlow 3s ease infinite alternate;
+        }
+        
+        @keyframes footerGlow {
+            from { border-color: #ff006c; }
+            to { border-color: #00f7ff; }
+        }
+
+        /* Live Activity Feed */
+        .activity-container {
+            background: rgba(10, 10, 10, 0.9);
+            border-radius: 25px;
+            padding: 30px;
+            position: relative;
+            border: 2px solid transparent;
+            animation: activityBorder 6s linear infinite;
+        }
+
+        @keyframes activityBorder {
+            0% { border-color: var(--neon-blue); }
+            50% { border-color: var(--neon-purple); }
+            100% { border-color: var(--neon-blue); }
+        }
+
+        .activity-item {
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            position: relative;
+            transition: all 0.4s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .activity-item:hover {
+            transform: translateX(15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: var(--neon-pink);
+            box-shadow: 0 0 30px rgba(255, 0, 108, 0.2);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">Sistem Informasi Geografis Web</div>
+            <div class="menu">
+                <div class="menu-item">⚡DASHBOARD</div> 
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome to My WEB </h1>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Sistem Informasi</h3>
+                    <p>Sistem yang menggabungkan aktivitas manusia dan teknologi untuk mengumpulkan, menyimpan, mengelola, dan menyebarkan informasi.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Geografis</h3>
+                    <p>Istilah yang berkaitan dengan geografi, yaitu ilmu yang mempelajari bumi dan segala hal yang ada di atasnya.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Wilayah Kab. Tebo</h3>
+                    <p>Kabupaten Tebo merupakan salah satu kabupaten yang terletak di Provinsi Jambi, Indonesia. Kabupaten ini dikenal dengan sumber daya alamnya yang melimpah, terutama di sektor pertambangan dan perkebunan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Activity Feed -->
+<div class="activity-container">
+    <h2>INFORMASI_</h2>
+    <div class="activity-item">
+        <a href="wilayah.html">🚀 Wilayah</a>
+    </div>
+    <div class="activity-item">
+        <a href="Peta.html">💎 Peta Wilayah</a>
+    </div>
+    <div class="activity-item">
+        <a href="Akun.html">🎮 Akun</a>
+    </div>
+</div>
+            <footer>
+                <p>&copy; 2025 Web Janes Tugas Sistem Informasi.</p>
+            </footer>
+</body>
+</html>
